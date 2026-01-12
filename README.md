@@ -1,6 +1,7 @@
 # 🎯 AI Resume Analyzer
 
 An intelligent resume-job matching system that analyzes resumes against job descriptions using a **hybrid NLP approach** combining rule-based extraction with LLM-powered understanding.
+**[Live Demo](https://your-demo-url.com)**
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://your-demo-url.com)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)](https://python.org)
