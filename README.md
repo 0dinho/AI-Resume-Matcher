@@ -11,7 +11,7 @@ An intelligent resume-job matching system that analyzes resumes against job desc
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
@@ -25,7 +25,7 @@ An intelligent resume-job matching system that analyzes resumes against job desc
 
 ---
 
-## 🎯 Overview
+## Overview
 
 **AI Resume Analyzer** solves a real problem: matching candidates to jobs is time-consuming and often subjective. This system automates the process by:
 
@@ -48,21 +48,21 @@ A **hybrid approach** that combines:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 📄 **Multi-format Resume Parsing** | PDF support with intelligent section detection |
-| 🔍 **15+ Section Types** | Contact, Experience, Education, Skills, Languages, Projects, Certifications... |
-| 🌍 **International Support** | 50+ country phone formats, 100+ cities, accented names |
-| 🎯 **Smart Skill Matching** | Recognizes related skills (React → JavaScript), abbreviations (ML → Machine Learning) |
-| 📊 **Weighted Scoring** | Skills (45%), Experience (35%), Education (20%) |
-| 💡 **Actionable Insights** | Strengths, weaknesses, and recommendations |
-| 🚀 **Production Ready** | Docker deployment, MinIO storage, Nginx reverse proxy |
+| **Multi-format Resume Parsing** | PDF support with intelligent section detection |
+| **15+ Section Types** | Contact, Experience, Education, Skills, Languages, Projects, Certifications... |
+| **International Support** | 50+ country phone formats, 100+ cities, accented names |
+| **Smart Skill Matching** | Recognizes related skills (React → JavaScript), abbreviations (ML → Machine Learning) |
+| **Weighted Scoring** | Skills (45%), Experience (35%), Education (20%) |
+| **Actionable Insights** | Strengths, weaknesses, and recommendations |
+| **Production Ready** | Docker deployment, MinIO storage, Nginx reverse proxy |
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -110,7 +110,7 @@ A **hybrid approach** that combines:
 
 ---
 
-## 🔧 Engineering Highlights
+## Engineering Highlights
 
 ### 1. Hybrid Rule-Based + LLM Architecture
 
@@ -219,7 +219,7 @@ Handles **15+ section types** with multiple naming conventions:
 
 ---
 
-## 🎬 Demo
+## Demo
 
 🔗 **[Live Demo](https://ai-resume-matcher.am-tech.cloud)**
 
