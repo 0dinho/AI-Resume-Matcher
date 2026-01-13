@@ -1,7 +1,7 @@
 # 🎯 AI Resume Analyzer
 
 An intelligent resume-job matching system that analyzes resumes against job descriptions using a **hybrid NLP approach** combining rule-based extraction with LLM-powered understanding.
-**[Live Demo](https://your-demo-url.com)**
+**[Live Demo](https://ai-resume-matcher.am-tech.cloud)**
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://your-demo-url.com)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)](https://python.org)
@@ -122,18 +122,6 @@ A **hybrid approach** that combines:
 | Pure Rule-based | Fast, free, predictable | Misses context, limited flexibility |
 | **Hybrid** | Best of both worlds | Requires careful design |
 
-**My Implementation:**
-
-```python
-# Rule-based for structured data (fast, reliable)
-contact = ContactExtractor().extract(text)      # ~5ms, 0 cost
-experience = ExperienceExtractor().extract(text) # ~10ms, 0 cost
-education = EducationExtractor().extract(text)   # ~10ms, 0 cost
-
-# LLM for context-dependent understanding (accurate)
-skills = SkillsExtractorLLM().extract(text)      # ~500ms, semantic understanding
-job_reqs = JDParserLLM().parse(text)             # ~500ms, requirement classification
-```
 
 **Results:**
 - Rule-based skills extraction: **~20% accuracy** (misses abbreviations, context)
@@ -144,16 +132,6 @@ job_reqs = JDParserLLM().parse(text)             # ~500ms, requirement classific
 ### 2. Intelligent Skill Matching
 
 The matching engine doesn't just do string comparison. It understands skill relationships:
-
-```python
-SKILL_RELATIONSHIPS = {
-    'machine learning': ['deep learning', 'tensorflow', 'pytorch', 'sklearn'],
-    'deep learning': ['cnn', 'rnn', 'lstm', 'transformer', 'neural networks'],
-    'computer vision': ['opencv', 'image classification', 'yolo', 'cnn'],
-    'python': ['django', 'flask', 'fastapi', 'pandas', 'numpy'],
-    # ... 50+ relationships
-}
-```
 
 **Match Types:**
 - `exact`: "Machine Learning" ↔ "Machine Learning"
@@ -207,22 +185,6 @@ skills_score = required_score * 0.8 + preferred_score * 0.2
 
 Handles **15+ section types** with multiple naming conventions:
 
-```python
-SECTION_PATTERNS = {
-    'experience': [
-        'work experience', 'professional experience', 'employment history',
-        'career history', 'work history', 'professional background'
-    ],
-    'education': [
-        'education', 'academic background', 'qualifications',
-        'educational background', 'academic qualifications'
-    ],
-    # ... 15+ section types
-}
-```
-
----
-
 ## 🛠 Tech Stack
 
 ### Backend
@@ -252,54 +214,14 @@ SECTION_PATTERNS = {
 | Technology | Purpose |
 |------------|---------|
 | **PyMuPDF** | PDF text extraction |
-| **python-docx** | DOCX parsing |
 | **Custom NLP Pipeline** | Rule-based extraction |
 | **Llama 3.1 70B** | Semantic understanding |
 
 ---
 
-## 📁 Project Structure
-
-```
-ai-resume-analyzer/
-├── backend/
-│   ├── app/
-│   │   ├── models/
-│   │   │   └── analysis_result.py      # Pydantic response models
-│   │   ├── routes/
-│   │   │   ├── upload_route.py         # File upload handling
-│   │   │   └── results_route.py        # Analysis + matching endpoint
-│   │   ├── services/
-│   │   │   ├── storage_service.py      # MinIO integration
-│   │   │   └── matching_service.py     # Resume-JD matching
-│   │   └── utils/
-│   │       └── nlp/
-│   │           ├── section_detector.py
-│   │           ├── contact_extractor.py
-│   │           ├── experience_extractor.py
-│   │           ├── education_extractor.py
-│   │           ├── skills_extractor_llm.py
-│   │           ├── languages_extractor.py
-│   │           └── jd_parser_llm.py
-│   ├── Dockerfile
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── services/
-│   ├── Dockerfile
-│   └── package.json
-│
-├── docker-compose.yml
-├── nginx.conf
-└── README.md
-```
-
 ## 🎬 Demo
 
-🔗 **[Live Demo](https://your-demo-url.com)**
+🔗 **[Live Demo](https://ai-resume-matcher.am-tech.cloud)**
 
 <!-- Add screenshots here when available -->
 <!--
@@ -312,19 +234,6 @@ ai-resume-analyzer/
 ![Match Results](./docs/screenshots/match.png)
 -->
 
----
-
-## 📊 Performance
-
-|           Metric            | Value  |
-|-----------------------------|--------|
-| Resume parsing (rule-based) | ~50ms  |
-|   Skills extraction (LLM)   | ~500ms |
-|     JD parsing (LLM)        | ~500ms |
-|   Matching calculation      | ~10ms  |
-
-
----
 
 ## Future Improvements
 
@@ -335,8 +244,3 @@ ai-resume-analyzer/
 - ATS compatibility scoring
 
 ---
-
-
-## 👤 Author
-
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
